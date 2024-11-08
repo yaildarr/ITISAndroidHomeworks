@@ -3,4 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="button">#DDFFA303</color>
+    <color name="editTextBackground">#3F3F3F</color>
+    <color name="bottomSheetBackground">#DD5A5A5A</color>
 </resources>

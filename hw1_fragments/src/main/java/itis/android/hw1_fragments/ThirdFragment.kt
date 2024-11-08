@@ -11,14 +11,14 @@ class ThirdFragment : Fragment(R.layout.fragment_third) {
 
     private lateinit var viewBinding: FragmentThirdBinding
 
-    private var value = "Стандартный текст"
+    private var value = textInputString
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        value = if (!arguments?.getString("textInput").isNullOrEmpty()) {
-            arguments?.getString("textInput").toString()
+        value = if (!arguments?.getString(textInputString).isNullOrEmpty()) {
+            arguments?.getString(textInputString).toString()
         } else {
-            "Стандартный текст"
+            defaultTextString
         }
         viewBinding = FragmentThirdBinding.bind(view)
         with (viewBinding){
@@ -34,5 +34,7 @@ class ThirdFragment : Fragment(R.layout.fragment_third) {
                 arguments = bundle
             }
         }
+        val defaultTextString = "Стандартный текст"
+        val textInputString = "textInput"
     }
 }

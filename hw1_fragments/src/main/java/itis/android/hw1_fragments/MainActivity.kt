@@ -20,9 +20,14 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
         enableEdgeToEdge()
-        supportFragmentManager.beginTransaction()
-            .add(mainContainerId, FirstFragment())
-            .commit()
+
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction().apply {
+                supportFragmentManager.beginTransaction()
+                    .add(mainContainerId, FirstFragment(),firstFragmentTag)
+                    .commit()
+            }
+        }
     }
     fun navigate(navClass: NavigateClasses, bundle: Bundle? = null){
         if (navClass.equals(NavigateClasses.SECOND)) {
@@ -94,5 +99,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     companion object{
         val secondFragment: SecondFragment = SecondFragment()
+        const val firstFragmentTag = "FirstFragment"
     }
 }

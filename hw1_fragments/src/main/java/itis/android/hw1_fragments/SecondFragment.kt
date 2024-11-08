@@ -12,16 +12,14 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
 
     private lateinit var value: String
 
-    private val bundle = Bundle()
-
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        value = if (!arguments?.getString("textInput").isNullOrEmpty()) {
-            arguments?.getString("textInput").toString()
+        val bundle = Bundle()
+        value = if (!arguments?.getString(textInputString).isNullOrEmpty()) {
+            arguments?.getString(textInputString).toString()
         } else {
-            "Стандартный текст"
+            defaultTextString
         }
         viewBinding = FragmentSecondBinding.bind(view)
         with (viewBinding){
@@ -30,7 +28,7 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
             }
             button3.setOnClickListener{
                 (textOut.text).let {
-                    bundle.putString("textInput",it.toString())
+                    bundle.putString(textInputString,it.toString())
                 }
                 (requireActivity() as? MainActivity)?.apply {
                     navigate(NavigateClasses.FRSECONTDOTHIRD,bundle)
@@ -45,5 +43,7 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
                 arguments = bundle
             }
         }
+        val defaultTextString = "Стандартный текст"
+        val textInputString = "textInput"
     }
 }

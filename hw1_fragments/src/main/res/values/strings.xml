@@ -5,4 +5,5 @@
     <string name="Third_screen">3 Экран</string>
     <string name="input">Введите текст</string>
     <string name="DeafultText">Стандартный текст</string>
+    <string name="Submit">Подтвердить</string>
 </resources>
