@@ -64,6 +64,7 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
     }
 
     companion object{
+
         fun getInstance(bundle: Bundle): FirstFragment {
             return FirstFragment().apply {
                 arguments = bundle

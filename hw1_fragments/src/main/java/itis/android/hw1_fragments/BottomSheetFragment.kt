@@ -19,6 +19,7 @@ class BottomSheetFragment : BottomSheetDialogFragment(R.layout.dialog_bottom_she
         super.onViewCreated(view, savedInstanceState)
         viewBinding = DialogBottomSheetBinding.bind(view)
         viewBinding.ActionBtnBS.isEnabled = false
+
         initViews()
     }
 
