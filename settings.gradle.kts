@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "ITISAndroidHomeworks"
 include(":app")
 include(":hw1_fragments")
+include(":hw2_recyclerview")

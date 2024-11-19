@@ -17,8 +17,10 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
 
     private lateinit var viewBinding: FragmentFirstBinding
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         viewBinding = FragmentFirstBinding.bind(view)
         value = if (!arguments?.getString(SecondFragment.textInputString).isNullOrEmpty()) {
             arguments?.getString(SecondFragment.textInputString).toString()
@@ -64,7 +66,6 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
     }
 
     companion object{
-
         fun getInstance(bundle: Bundle): FirstFragment {
             return FirstFragment().apply {
                 arguments = bundle
