@@ -4,7 +4,6 @@ import android.content.Context
 import projects.com.hw2_recyclerview.Model.ButtonsHolderData
 import projects.com.hw2_recyclerview.Model.ImageTextHoldersData
 import projects.com.hw2_recyclerview.Model.MultiHoldersData
-import projects.com.hw2_recyclerview.Model.MyListItem
 
 class ItemRepository {
     fun getList() : List<MultiHoldersData> = listOf(
@@ -126,6 +125,36 @@ class ItemRepository {
             imageUrl = "https://upload.wikimedia.org/wikipedia/ru/b/b3/%D0%90%D0%B2%D0%B0%D1%82%D0%B0%D1%80_%D0%9F%D1%83%D1%82%D1%8C_%D0%B2%D0%BE%D0%B4%D1%8B_%D0%BF%D0%BE%D1%81%D1%82%D0%B5%D1%80.jpg",
             title = "Аватар",
             description = "Научно-фантастический фильм о столкновении людей с инопланетной цивилизацией на планете Пандора."
+        ),
+        ImageTextHoldersData(
+            id = 20,
+            imageUrl = "https://upload.wikimedia.org/wikipedia/ru/thumb/f/f9/%D0%91%D1%80%D0%B0%D1%82_%28%D1%81%D0%B0%D1%83%D0%BD%D0%B4%D1%82%D1%80%D0%B5%D0%BA%29.jpg/274px-%D0%91%D1%80%D0%B0%D1%82_%28%D1%81%D0%B0%D1%83%D0%BD%D0%B4%D1%82%D1%80%D0%B5%D0%BA%29.jpg",
+            title = "Брат",
+            description = "Фильм о молодом человеке, который после службы в армии возвращается в родной город и сталкивается с криминальным миром."
+        ),
+        ImageTextHoldersData(
+            id = 21,
+            imageUrl = "https://upload.wikimedia.org/wikipedia/ru/f/f1/Sibirskij_cirulnik.jpg",
+            title = "Сибирский цирюльник",
+            description = "История о любви и предательстве, разворачивающаяся на фоне событий начала XX века."
+        ),
+        ImageTextHoldersData(
+            id = 22,
+            imageUrl = "https://thumbs.dfs.ivi.ru/storage8/contents/2/f/f65fe1e73cc6a848863fc10af86d25.jpg",
+            title = "Неуловимые мстители",
+            description = "Приключенческий фильм о группе молодых людей, которые борются с врагами революции."
+        ),
+        ImageTextHoldersData(
+            id = 23,
+            imageUrl = "https://upload.wikimedia.org/wikipedia/ru/f/f6/Die_Hard.gif",
+            title = "Крепкий орешек",
+            description = "Комедийный боевик о полицейском, который борется с террористами в небоскребе."
+        ),
+        ImageTextHoldersData(
+            id = 24,
+            imageUrl = "https://upload.wikimedia.org/wikipedia/ru/2/2c/Kin-dza-dza-dza-poster.jpg",
+            title = "Кин-дза-дза!",
+            description = "Комедия о двух советских людях, которые попадают на планету Плюк."
         )
     )
 }

@@ -18,6 +18,4 @@ class ButtonsHolderData(
     override val id : Int,
     val btn1text : String,
     val btn2text : String,
-//    val btn1Onclick : (RecyclerView, Context) -> Unit,
-//    val btn2Onclick : (RecyclerView, Context) -> Unit,
 ) : MultiHoldersData(id)

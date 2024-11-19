@@ -11,10 +11,10 @@ class ButtonHolder(
     fun bindButton(onViewChange: (Boolean) -> Unit){
         with(binding){
             button1.setOnClickListener {
-                onViewChange(false)
+                onViewChange(true)
             }
             button2.setOnClickListener {
-                onViewChange(true)
+                onViewChange(false)
             }
         }
     }

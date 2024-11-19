@@ -1,5 +1,7 @@
 package projects.com.hw2_recyclerview.Adapter
 
+import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -16,7 +18,8 @@ class MainAdapter(
     private val requestManager: RequestManager,
     items: List<MultiHoldersData>,
     private val onViewChange : (Boolean) -> Unit,
-    private val listAction: (Int) -> Unit
+    private val listAction: (Int) -> Unit,
+    private val onItemLongClick: (Int) -> Unit,
 
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -67,7 +70,7 @@ class MainAdapter(
                 holder.bindButton(onViewChange)
             }
             is ItemListHolder -> {
-                val item = dataList[position - 1]
+                val item = dataList[position]
                 if (item is ImageTextHoldersData) {
                     holder.bindItem(item)
                 } else {
@@ -76,18 +79,33 @@ class MainAdapter(
             }
             else -> Unit
         }
+        holder.itemView.setOnLongClickListener {
+            onItemLongClick(position)
+            true
+        }
     }
+
+
 
     override fun getItemViewType(position: Int): Int {
         return if (position == 0) {
             TYPE_BUTTON
         } else {
-            when (dataList[position - 1]) {
+            when (dataList[position]) {
                 is ImageTextHoldersData -> TYPE_ITEM
                 is ButtonsHolderData -> TYPE_BUTTON
                 else -> throw IllegalStateException("Unknown data type at position: $position")
             }
         }
     }
+
+    fun updateItems(newItems: List<MultiHoldersData>) {
+        dataList.clear()
+        dataList.addAll(newItems)
+        notifyDataSetChanged()
+        Log.d("MainAdapter", "Adapter updated with ${dataList.size} items")
+    }
+
+
 
 }
