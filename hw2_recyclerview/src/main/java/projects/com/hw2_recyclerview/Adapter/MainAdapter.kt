@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.RequestManager
 import projects.com.hw2_recyclerview.Holder.ButtonHolder
@@ -13,6 +14,7 @@ import projects.com.hw2_recyclerview.Model.ImageTextHoldersData
 import projects.com.hw2_recyclerview.Model.MultiHoldersData
 import projects.com.hw2_recyclerview.databinding.ItemListBinding
 import projects.com.hw2_recyclerview.databinding.LineButtonBinding
+import projects.com.hw2_recyclerview.util.MultiDiffUtilCallback
 
 class MainAdapter(
     private val requestManager: RequestManager,
@@ -99,9 +101,12 @@ class MainAdapter(
         }
     }
 
-    fun updateItems(newItems: List<MultiHoldersData>) {
+    fun updateItems( newItems: List<MultiHoldersData>) {
+        val diffCallback = MultiDiffUtilCallback(newItems, dataList)
+        val diffResult = DiffUtil.calculateDiff(diffCallback)
         dataList.clear()
         dataList.addAll(newItems)
+        diffResult.dispatchUpdatesTo(this)
         notifyDataSetChanged()
         Log.d("MainAdapter", "Adapter updated with ${dataList.size} items")
     }

@@ -57,7 +57,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             items = dataList,
             onViewChange = { isGridView ->
                 isGrid = isGridView
-                updateLayoutManager()
+                updateLayoutManager(isGrid)
             },
             listAction = { position ->
                 clickOnItem(position)
@@ -74,7 +74,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
 
 
-    private fun updateLayoutManager() {
+    private fun updateLayoutManager(isGrid: Boolean) {
         binding.recyclerView.layoutManager =
             if (!isGrid) {
                 GridLayoutManager(context, 3, RecyclerView.VERTICAL, false).apply {
@@ -97,6 +97,20 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 isCancelable = true
             }
             dialog.show(parentFragmentManager, bottomSheetTag)
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putBoolean("LayoutManager", isGrid)
+    }
+
+    override fun onViewStateRestored(inState: Bundle?) {
+        super.onViewStateRestored(inState)
+        if (inState != null) {
+            if (inState.getBoolean("LayoutManager", false)) {
+                updateLayoutManager(isGrid)
+            }
         }
     }
 
