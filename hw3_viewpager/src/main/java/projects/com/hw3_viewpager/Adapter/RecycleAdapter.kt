@@ -45,7 +45,6 @@ class RecycleAdapter(
                 selectedPosition = holder.bindingAdapterPosition
                 question.selectedAnswer = holder.bindingAdapterPosition
                 notifyItemChanged(selectedPosition)
-                repository.findById(position)?.isAnswered = true
             }
         }
     }

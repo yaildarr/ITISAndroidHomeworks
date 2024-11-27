@@ -44,7 +44,11 @@ class ViewPagerFragment : Fragment(R.layout.fragment_view_pager) {
                 ) {
                     viewPager.currentItem += 1
                 } else {
-                    Snackbar.make(viewPager, "Тест завершен!", Snackbar.LENGTH_SHORT).show()
+                    if (isAllQuestionsAnswered()) {
+                        Snackbar.make(viewPager, "Тест завершен!", Snackbar.LENGTH_SHORT).show()
+                    } else {
+                        Snackbar.make(viewPager, "Вы ответили не на все вопросы!", Snackbar.LENGTH_SHORT).show()
+                    }
                 }
             }
         }
@@ -93,7 +97,7 @@ class ViewPagerFragment : Fragment(R.layout.fragment_view_pager) {
 
 
     private fun isAllQuestionsAnswered(): Boolean {
-        val questions = repository.questions
-        return questions.all { it.isAnswered == true }
+        val questions = repository.questions // Получение списка вопросов
+        return questions.all { it.selectedAnswer != -1 }
     }
 }
