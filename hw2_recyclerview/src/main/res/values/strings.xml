@@ -6,8 +6,8 @@
     <string name="film_image">Обложка фильма</string>
     <string name="film_description">Описание фильма</string>
     <string name="film_name">Название фильма</string>
-    <string name="randomCount">Добавить случайное количество элементов</string>
-    <string name="deleteRandom">Удалить случайное количество элементов</string>
+    <string name="randomCount">Добавить количество элементов</string>
+    <string name="deleteRandom">Удалить количество элементов</string>
     <string name="addOneRandom">Добавить один случайный элемент</string>
     <string name="deleteAddRandom">Удалить один случайный элемент</string>
     <string name="enterCount">Введите количество</string>

@@ -1,15 +1,13 @@
 package projects.com.hw2_recyclerview.Fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.bumptech.glide.Glide
 import projects.com.hw2_recyclerview.R
 import projects.com.hw2_recyclerview.databinding.FragmentItemBinding
-import projects.com.hw2_recyclerview.databinding.ItemListBinding
+
 
 class ItemFragment : Fragment(R.layout.fragment_item) {
 
@@ -28,6 +26,7 @@ class ItemFragment : Fragment(R.layout.fragment_item) {
             Glide.with(this@ItemFragment).load(image_url).into(movieImage)
         }
     }
+
 
     companion object{
         private const val ARG_TITLE = "ARG_TITLE"
