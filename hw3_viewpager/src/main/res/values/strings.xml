@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">hw3_ViewPager</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="AnswerOption">Вариант ответа</string>
+    <string name="SampleCountQuestion">1 Вопрос</string>
+    <string name="questioncount">questionCount</string>
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.ViewPagerFragment">
+
+    <!-- Заголовок с количеством вопросов -->
+    <TextView
+        android:id="@+id/questionCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/questioncount"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/questionCount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonLayout" />
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonBack"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:foregroundTint="?attr/colorOnPrimary"
+            app:cornerRadius="24dp"
+            app:icon="@drawable/ic_back"
+            app:iconGravity="textStart"
+            app:iconSize="24dp"
+            app:iconTint="?attr/colorOnPrimary"
+            app:rippleColor="?attr/colorOnPrimary" />
+
+        <!-- Кнопка Вперед -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonForward"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:foregroundTint="?attr/colorOnPrimary"
+            app:cornerRadius="24dp"
+            app:icon="@drawable/ic_forward"
+            app:iconGravity="textEnd"
+            app:iconSize="24dp"
+            app:iconTint="?attr/colorOnPrimary"
+            app:rippleColor="?attr/colorOnPrimary"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
