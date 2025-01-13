@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ITISAndroidHomeworks" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">#4C5DFF</item>
+        <item name="colorPrimaryDark">#000DFF</item>
+    </style>
+
+    <style name="Base.Theme.ITISAndroidHomeworks.red" parent="Base.Theme.ITISAndroidHomeworks">
+        <item name="colorPrimary">#FF4C4C</item>
+        <item name="colorPrimaryDark">#FF0000</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
+    <style name="Base.Theme.ITISAndroidHomeworks.yellow" parent="Base.Theme.ITISAndroidHomeworks">
+        <item name="colorPrimary">#FFE14C</item>
+        <item name="colorPrimaryDark">#D0FF00</item>
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>
+
+    <style name="Base.Theme.ITISAndroidHomeworks.green" parent="Base.Theme.ITISAndroidHomeworks">
+        <item name="colorPrimary">#4CFF64</item>
+        <item name="colorPrimaryDark">#00FF0D</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
+
+</resources>
