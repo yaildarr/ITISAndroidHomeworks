@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">hw5_coroutines</string>
+    <string name="cancel">Отклонить</string>
+    <string name="Settings">Настройки</string>
+    <string name="requestPermission">Предоставьте разрешение для корректной работы приложения</string>
+    <string name="needPermission">Необходимо разрешение</string>
+    <string name="enterColCoroutines">Введите количество корутин</string>
+    <string name="cantBeEmpty">Поле не может быть пустым</string>
+    <string name="howToStartCoroutines">Как будут запущены корутины</string>
+    <string name="logicWorkCoroutines">Логика работы корутин</string>
+    <string name="poolThreads">Пул потоков</string>
+    <string name="lauch">Запустить</string>
+    <string name="coroutinesNotStarted">Корутины не запущены</string>
+    <string name="CancelButton">Отменить</string>
+    <string name="canceledCoroutines">Отменено корутин: %1$s</string>
+    <string name="Completed">%1$s Завершена</string>
+    <string name="Exception">Ошибка: %1$s</string>
 </resources>

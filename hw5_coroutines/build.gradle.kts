@@ -55,6 +55,11 @@ dependencies {
     implementation(libs.androidx.material3.android)
     implementation("androidx.activity:activity-compose:1.7.0")
     implementation("androidx.compose.runtime:runtime:1.5.0")
+    implementation("androidx.compose.material:material:1.7.5")
+    implementation("androidx.compose.ui:ui:1.7.5")
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.activity)
+    implementation(libs.glide)
 
 
     testImplementation(libs.junit)
