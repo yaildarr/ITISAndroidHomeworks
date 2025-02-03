@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner_array">
+        <item>Max</item>
+        <item>High</item>
+        <item>Default</item>
+        <item>Low</item>
+    </string-array>
+</resources>
