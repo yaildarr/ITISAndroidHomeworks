@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ITISAndroidHomeworks" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.ITISAndroidHomeworks" parent="Base.Theme.ITISAndroidHomeworks" />
+
+    <style name="Base.Theme.ITISAndroidHomeworks.new" parent="Base.Theme.ITISAndroidHomeworks">
+        <item name="colorPrimary">#FFA84C</item>
+        <item name="colorPrimaryDark">#FFCC00</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+</resources>
